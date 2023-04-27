@@ -1,0 +1,229 @@
+.divisions-page-header{
+    color: white;
+    letter-spacing: 5px;
+    margin-top: 5rem;
+}
+
+.divisions-page-header1{
+    font-size: 52px;
+    padding-bottom: 2rem;
+}
+
+.divisions1-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px auto 0;
+    width: max-content;
+}
+
+.divisions1-container > div {
+    margin: 0 2%;
+}
+
+.divisions1-card-logistics > img {
+    background-position: bottom;
+}
+
+.divisions1-card {
+    margin: 0 2%;
+    background: #DBBDBD;
+    width: 300px;
+    height: 400px;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    transition: .2s all;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    color: white;
+    position: relative;
+    letter-spacing: 2px;
+}
+
+.divisions1-card:hover span {
+    display: none;
+}
+
+.divisions1-card > span {
+    margin: auto;
+    max-width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    z-index: 0;
+    position: absolute;
+}
+
+.divisions1-container:hover .divisions1-card {
+    filter: blur(3px);
+    opacity: .5;
+    transform: scale(.98);
+    box-shadow: none;
+}
+
+.divisions1-container:hover .divisions1-card:hover {
+    transform: scale(1.1);
+    filter: blur(0px);
+    opacity: 1;
+    box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.125);
+    background: #A82C2C;
+    color: white;
+    font-size: 20px;
+}
+
+
+.hover-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    font-size: 90%;
+}
+
+.divisions1-card:hover .hover-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.divisions-page-header{
+    animation-name: enter-from-top;
+    animation-duration: 1s;
+}
+
+.divisions1-card-agrar{
+    animation-name: enter-from-left;
+    animation-duration: 1s;
+}
+
+.divisions1-card-finance{
+    animation-name: enter-from-bottom;
+    animation-duration: 1s;
+}
+
+.divisions1-card-logistics{
+    animation-name: enter-from-right;
+    animation-duration: 1s;
+}
+
+.divisions-card-image {
+    height: 100%;
+    width: 100%;
+    filter: brightness(25%);
+    object-fit: cover;
+    z-index: 0;
+    border-radius: inherit;
+}
+
+@keyframes enter-from-top {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes enter-from-bottom {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes enter-from-left {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes enter-from-right {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+
+
+
+
+
+@media (max-width: 850px) {
+
+    .navbar-hamburger-scroll{
+        position: fixed;
+        z-index: 1;
+        padding-top: 0.5rem;
+        transition: background-color 1.5s ease-in-out;
+    }
+
+    .divisions-page-header1{
+        display: none;
+    }
+
+    .divisions1-container{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: -5rem;
+    }
+
+    .divisions1-card{
+        height: 10rem;
+        margin-bottom: 1rem;
+    }
+
+    .divisions1-card-logistics{
+        background-position: bottom;
+    }
+
+    .divisions1-container:hover .divisions1-card {
+        filter: blur(0px);
+        opacity: 1;
+        transform: scale(1);
+        box-shadow: none;
+    }
+
+    .divisions1-card:hover .hover-text {
+        display: none;
+    }
+
+    .divisions1-card:hover span {
+        display: flex;
+    }
+
+    .divisions1-container:hover .divisions1-card:hover {
+        transform: scale(1);
+        filter: blur(0px);
+        opacity: 1;
+        box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.125);
+        background: #A82C2C;
+        color: white;
+        font-size: 30px;
+    }
+}

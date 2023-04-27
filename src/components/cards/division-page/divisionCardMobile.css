@@ -1,0 +1,124 @@
+.division-card-mobile{
+    display: none;
+}
+
+@media (max-width: 850px) {
+    .division-card-mobile-p {
+        font-size: 12px;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .division-card-mobile {
+        margin: auto;
+        width: 100%;
+        display: block;
+    }
+
+    .card-front{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .card-back{
+        text-align: center;
+        z-index: 0;
+    }
+
+    .cardTitleDivisionsMobile{
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        letter-spacing: 7px;
+        text-align: center;
+    }
+
+    .read-more{
+        position: absolute;
+        bottom: 10%;
+        text-align: center;
+        opacity: 0.7;
+        font-size: 90%;
+        z-index: 2;
+    }
+
+    .cardImgDivisionsMobile{
+        height: 100%;
+        width: 100%;
+        filter: brightness(25%);
+        object-fit: cover;
+        z-index: 0;
+        border-radius: 15px;
+    }
+
+    .card-div1 {
+        width: 20rem;
+        cursor: pointer;
+        transform-style: preserve-3d;
+    }
+
+    .content-div1 {
+        text-align: center;
+        position: relative;
+        padding: 5em;
+        transform-style: preserve-3d;
+        height: 17rem;
+        transform: rotateY(0); /* Initialize with no rotation */
+    }
+
+    .front-div1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 2.25s;
+
+    }
+
+    .card-div1 {
+        perspective: 1000px;
+    }
+
+    .content-div1 {
+        transform-style: preserve-3d;
+        transition: transform 1s;
+    }
+
+    .card-div1:hover .content-div1 {
+        transform: rotateY(180deg);
+    }
+
+    .card-div1.flip .content-div1 {
+        transform: rotateY(180deg);
+    }
+
+    .back-div1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        transition: transform 2.25s;
+        transform: rotateY(180deg); /* Initially hide the back content */
+    }
+
+    .front-div1,
+    .back-div1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        transform-style: preserve-3d;
+        backface-visibility: hidden;
+        border-radius: 20px;
+    }
+
+
+    .back-div1 {
+        transform: rotateY(0.5turn);
+    }
+}

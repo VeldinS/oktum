@@ -1,0 +1,138 @@
+.logistics-page-header{
+    color: white;
+    letter-spacing: 10px;
+    font-size: 300%;
+}
+
+.logistics-text{
+    width: 80%;
+    text-align: center;
+}
+
+.my-component-logistics {
+    height: 280vh;
+    color: whitesmoke;
+    padding-bottom: 5rem;
+}
+
+.general-info-logistics {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.general-info-logistics h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.general-info-logistics p {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+.mobile-text{
+    order: 1;
+}
+
+.logistics-page-header{
+    animation-name: enter-from-bottom;
+    animation-duration: 1s;
+}
+
+@keyframes enter-from-bottom {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.logistics-cards-mobile{
+    display: none;
+}
+
+@media (max-width:850px) {
+
+    .general-info-logistics{
+        text-align: center;
+    }
+
+    .logistics-cards-mobile{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .logistics-cards-desktop{
+        display: none;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .my-component-logistics{
+        padding-top: 0;
+    }
+
+    .general-info-logistics{
+        margin-bottom: 0;
+
+    }
+
+    .general-info-logistics h1{
+        font-size: 35px;
+        text-align: center;
+    }
+
+    .logistics-text{
+        width: 95%;
+    }
+
+    .logistics-text p{
+        font-size: 95%;
+        letter-spacing: 2px;
+        font-weight: 600;
+    }
+
+    .my-react-div-heading-logistics h2, .my-react-div-heading-logistics1 h2{
+        font-size: 35px;
+    }
+
+    .my-react-div-paragraph-logistics p, .my-react-div-paragraph1-logistics p{
+        font-size: 15px;
+    }
+
+    .mobile-text{
+        order: 2;
+    }
+
+    hr{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+
+    }
+
+    .logistics-cards-mobile{
+        display: block;
+    }
+
+    .logistics-cards-desktop{
+        display: none;
+    }
+
+}
+

@@ -1,0 +1,158 @@
+.fixed-background{
+    background-attachment: fixed;
+}
+
+.agrar-page-header{
+    color: white;
+    letter-spacing: 10px;
+    font-size: 300%;
+}
+
+.agrar-text{
+    width: 80%;
+    text-align: center;
+}
+
+.my-component-agrar {
+    color: whitesmoke;
+    height: max-content;
+    padding-bottom: 5rem;
+}
+
+.general-info-agrar {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.general-info-agrar h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.general-info-agrar p {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+.mobile-text{
+    order: 1;
+}
+
+hr{
+    width: 90%;
+    height: 5px; /* set the height of the hr element */
+    background-color: white; /* set the color of the hr element */
+    border: none;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    opacity: 0.6;
+}
+
+.hor-line{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.agrar-page-header{
+    animation-name: enter-from-bottom;
+    animation-duration: 1s;
+}
+
+@keyframes enter-from-bottom {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.agrar-cards-mobile{
+    display: none;
+}
+
+@media (max-width:850px) {
+
+    .agrar-cards-mobile{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .agrar-card-desktop{
+        display: none;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .my-component-agrar{
+        padding-top: 4rem;
+    }
+
+    .general-info-agrar{
+        margin-bottom: 4rem;
+
+    }
+
+    .general-info-agrar h1{
+        font-size: 35px;
+        text-align: center;
+    }
+
+    .agrar-text{
+        width: 95%;
+    }
+
+    .agrar-text p{
+        font-size: 95%;
+        letter-spacing: 2px;
+        font-weight: 600;
+    }
+
+    .my-react-div-heading h2{
+        font-size: 35px;
+    }
+
+    .my-react-div-paragraph p, .my-react-div-paragraph1 p{
+        font-size: 15px;
+    }
+
+    .mobile-text{
+        order: 2;
+    }
+
+    .hor-line{
+        display: flex;
+    }
+
+    hr{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+
+    }
+
+    .agrar-card-desktop{
+        display: none;
+    }
+
+    .agrar-cards-mobile{
+        display: flex;
+        flex-direction: column;
+    }
+
+}

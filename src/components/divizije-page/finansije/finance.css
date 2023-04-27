@@ -1,0 +1,137 @@
+.finance-page-header{
+    color: white;
+    letter-spacing: 10px;
+    font-size: 300%;
+}
+
+.finance-text{
+    width: 80%;
+    text-align: center;
+}
+
+.my-component-finance {
+    height: 280vh;
+    color: whitesmoke;
+    padding-bottom: 5rem;
+}
+
+.general-info-finance {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.general-info-finance h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.general-info-finance p {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+.mobile-text{
+    order: 1;
+}
+
+.finance-page-header{
+    animation-name: enter-from-bottom;
+    animation-duration: 1s;
+}
+
+@keyframes enter-from-bottom {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.finance-cards-mobile{
+    display: none;
+}
+
+@media (max-width:850px) {
+
+    .general-info-finance{
+        text-align: center;
+    }
+
+    .finance-cards-mobile{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .finance-cards-desktop{
+        display: none;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .my-component-finance{
+        padding-top: 0;
+    }
+
+    .general-info-finance{
+        margin-bottom: 0;
+
+    }
+
+    .general-info-finance h1{
+        font-size: 35px;
+        text-align: center;
+    }
+
+    .finance-text{
+        width: 95%;
+    }
+
+    .finance-text p{
+        font-size: 95%;
+        letter-spacing: 2px;
+        font-weight: 600;
+    }
+
+    .my-react-div-heading-finance h2, .my-react-div-heading-finance1 h2{
+        font-size: 35px;
+    }
+
+    .my-react-div-paragraph-finance p, .my-react-div-paragraph1-finance p{
+        font-size: 15px;
+    }
+
+    .mobile-text{
+        order: 2;
+    }
+
+    hr{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+
+    }
+
+    .finance-cards-mobile{
+        display: block;
+    }
+
+    .finance-cards-desktop{
+        display: none;
+    }
+
+}
