@@ -2,7 +2,6 @@ import React, {useEffect, useRef, useState} from 'react';
 import {useLocation, useNavigate} from "react-router-dom";
 
 import {texts} from "../../languages/language";
-import axios from "axios";
 
 import './contact.css'
 
@@ -51,23 +50,12 @@ const Contact = () => {
     }
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        // const newActivity = {
-        //     name: formData.name,
-        //     email: formData.email,
-        //     message: formData.message
-        // }
-        // const response = await axios.post('http://localhost:5000/Admin/Control-panel/Activities/Add', newActivity, {
-        //     headers: {
-        //         'Content-Type': 'application/json',
-        //     }
-        // });
         emailjs.sendForm('service_qy1382c', 'template_0wa2sh8', '#myForm1', '2zN-nEZKG9w_JTp6c')
             .then(function(response) {
                 console.log('SUCCESS!', response.status, response.text);
             }, function(error) {
                 console.log('FAILED...', error);
             });
-
         if(language == 'bosnian'){
             toast.success('Poruka uspješno poslana!', {style: {
                     borderRadius: '10px',
@@ -184,7 +172,10 @@ const Contact = () => {
                                 <br/>
                                 <p onClick={() => navigate('/Divisions')} className={"navbar-text1"}>{texts[language].divisionsButton}</p>
                                 <br/>
-                                <p onClick={toggleLanguageMobileAbout}>{texts[language].button}</p>
+                                <div style={{display:"flex", flexDirection:"row", alignItems:"center"}}>
+                                    <p style={{paddingRight: "5px"}} onClick={toggleLanguageMobileAbout}>{texts[language].button}</p>
+                                    <img className={"language-image"} src={getFlagImageUrl(language)} alt={language + ' flag'}/>
+                                </div>
                                 <img onClick={hideAboutOverlay} className={"close-button"} src={image7} alt={"/"}/>
                             </div>
                         </div>

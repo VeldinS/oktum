@@ -155,7 +155,10 @@ const About = () => {
                                 <br/>
                                 <p onClick={() => navigate('/Contact')} className={"navbar-text1"}>{texts[language].contactButton}</p>
                                 <br/>
-                                <p onClick={toggleLanguageMobileAbout}>{texts[language].button}</p>
+                                <div style={{display:"flex", flexDirection:"row", alignItems:"center"}}>
+                                    <p style={{paddingRight: "5px"}} onClick={toggleLanguageMobileAbout}>{texts[language].button}</p>
+                                    <img className={"language-image"} src={getFlagImageUrl(language)} alt={language + ' flag'}/>
+                                </div>
                                 <img onClick={hideAboutOverlay} className={"close-button"} src={image6} alt={"/"}/>
                             </div>
                         </div>
@@ -214,12 +217,12 @@ const About = () => {
                         <h1 className={"about-section1-heading"}>{texts[language].aboutPageHeading3}</h1>
                         <div className={"hor-line-about"}><hr/></div>
                         <div className={"about-section1-row1"} style={{marginBottom: "2rem"}}>
-                            <img src={image7} className={"about-section1-row2-image"}/>
+                            <img src={image7} className={"about-section1-row2-image"} alt={''}/>
                             <p className={"about-section1-text"}>{texts[language].aboutPageText3_1}</p>
                         </div>
                         <div className={"about-section1-row1"}>
                             <p className={"about-section1-text"}>{texts[language].aboutPageText3_2}</p>
-                            <img src={image8} className={"about-section1-row2-image"}/>
+                            <img src={image8} className={"about-section1-row2-image"} alt={''}/>
                         </div>
                     </div>
 
@@ -238,7 +241,7 @@ const About = () => {
                                 <hr/>
                                 <li>{texts[language].aboutPageText4_5}</li>
                             </ul>
-                            <img src={image5} className={"about-section3-image"}/>
+                            <img src={image5} className={"about-section3-image"} alt={''}/>
                         </div>
                     </div>
 

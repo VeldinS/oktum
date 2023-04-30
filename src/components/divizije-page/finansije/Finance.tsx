@@ -151,7 +151,10 @@ const Finance = () => {
                             <br/>
                             <p onClick={() => navigate('/Contact')} className={"navbar-text1"}>{texts[language].contactButton}</p>
                             <br/>
-                            <p onClick={toggleLanguageMobileAbout}>{texts[language].button}</p>
+                            <div style={{display:"flex", flexDirection:"row", alignItems:"center"}}>
+                                <p style={{paddingRight: "5px"}} onClick={toggleLanguageMobileAbout}>{texts[language].button}</p>
+                                <img className={"language-image"} src={getFlagImageUrl(language)} alt={language + ' flag'}/>
+                            </div>
                             <img onClick={hideAboutOverlay} className={"close-button"} src={image8} alt={"/"}/>
                         </div>
                     </div>

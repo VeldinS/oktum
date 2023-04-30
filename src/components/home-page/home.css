@@ -902,6 +902,8 @@ button:hover .button-text {
         background-color: transparent;
         padding: 20px;
         border-radius: 5px;
+        animation-name: enter-from-bottom;
+        animation-duration: 0.5s;
     }
 
     .text-container p {
