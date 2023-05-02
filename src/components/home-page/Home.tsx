@@ -196,8 +196,8 @@ const Home = () => {
                         <br/>
                         <p onClick={() => navigate('/Contact')} className={"navbar-text1"}>{texts[language].contactButton}</p>
                         <br/>
-                        <div style={{display:"flex", flexDirection:"row", alignItems:"center"}}>
-                            <p style={{paddingRight: "5px"}} onClick={toggleLanguageMobile}>{texts[language].button}</p>
+                        <div style={{display:"flex", flexDirection:"row", alignItems:"center", marginBottom:"10px"}}>
+                            <p style={{paddingRight: "5px", margin:"auto"}} onClick={toggleLanguageMobile}>{texts[language].button}</p>
                             <img className={"language-image"} src={getFlagImageUrl(language)} alt={language + ' flag'}/>
                         </div>
                         <img onClick={hideOverlay} className={"close-button"} src={image9} alt={"/"}/>

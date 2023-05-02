@@ -637,7 +637,7 @@ button:hover .button-text {
 .language-image{
     width: 50px;
     height: 30px;
-    border-radius: 5px;
+    border-radius: 7px;
     filter: brightness(80%) contrast(120%);
     margin: auto;
 }
