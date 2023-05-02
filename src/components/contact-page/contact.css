@@ -181,17 +181,17 @@
 
 .contact-page-info{
     animation-name: enter-from-left;
-    animation-duration: 1s;
+    animation-duration: 2s;
 }
 
 .contact-page-form{
     animation-name: enter-from-right;
-    animation-duration: 1s;
+    animation-duration: 2s;
 }
 
 .locationBox{
     animation-name: enter-from-bottom;
-    animation-duration: 1s;
+    animation-duration: 2s;
 }
 
 @keyframes enter-from-bottom {

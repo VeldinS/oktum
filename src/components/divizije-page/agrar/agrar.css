@@ -66,7 +66,7 @@ hr{
 
 .agrar-page-header{
     animation-name: enter-from-bottom;
-    animation-duration: 1s;
+    animation-duration: 2s;
 }
 
 @keyframes enter-from-bottom {

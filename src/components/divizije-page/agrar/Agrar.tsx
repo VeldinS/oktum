@@ -30,6 +30,7 @@ import image15 from "../../../images/english-flag.webp";
 import DivisionCard from "../../cards/division-page/DivisionCard";
 import DivisionCard1 from "../../cards/division-page/DivisionCard1";
 import DivisionCardMobile from "../../cards/division-page/DivisionCardMobile";
+import image18 from "../../../images/agrar-background-mobile.webp";
 
 const Divisions = () => {
 
@@ -53,6 +54,22 @@ const Divisions = () => {
                 agrarBackground.classList.add("fixed-background");
             } else {
                 setBgImage(image7);
+            }
+        };
+        changeBackground();
+        mediaQuery.addListener(changeBackground);
+        return () => {
+            mediaQuery.removeListener(changeBackground);
+        };
+    }, []);
+
+    const [bgImageMobile, setBgImageMobile] = useState(image3);
+    useEffect(() => {
+        const changeBackground = () => {
+            if (mediaQuery.matches) {
+                setBgImageMobile(image3);
+            } else {
+                setBgImageMobile(image18);
             }
         };
         changeBackground();
@@ -151,8 +168,8 @@ const Divisions = () => {
                             <br/>
                             <p onClick={() => navigate('/Contact')} className={"navbar-text1"}>{texts[language].contactButton}</p>
                             <br/>
-                            <div style={{display:"flex", flexDirection:"row", alignItems:"center"}}>
-                                <p style={{paddingRight: "5px"}} onClick={toggleLanguageMobileAbout}>{texts[language].button}</p>
+                            <div style={{display:"flex", flexDirection:"row", alignItems:"center", marginBottom:"10px"}}>
+                                <p style={{paddingRight: "5px", margin:"auto"}} onClick={toggleLanguageMobileAbout}>{texts[language].button}</p>
                                 <img className={"language-image"} src={getFlagImageUrl(language)} alt={language + ' flag'}/>
                             </div>
                             <img onClick={hideAboutOverlay} className={"close-button"} src={image8} alt={"/"}/>
@@ -164,7 +181,7 @@ const Divisions = () => {
                 </div>
             </div>
 
-            <div className="my-component-agrar" style={{backgroundImage:  `linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,.55)), url(${image3})`, backgroundAttachment: "fixed", backgroundSize: "cover"}}>
+            <div className="my-component-agrar" style={{backgroundImage:  `linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,.55)), url(${bgImageMobile})`, backgroundAttachment: "fixed", backgroundSize: "cover"}}>
 
                 <div className="general-info-agrar">
                     <h1>{texts[language].agrarPageHeading1}</h1>

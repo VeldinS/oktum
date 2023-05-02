@@ -621,7 +621,7 @@ button:hover .button-text {
 
 .navbar{
     animation-name: enter-navbar;
-    animation-duration: 1s;
+    animation-duration: 2s;
 }
 @keyframes slide-in {
     from {
@@ -885,7 +885,7 @@ button:hover .button-text {
         top: 0;
         left: 0;
         width: 100%;
-        height: 100%;
+        height: 100vh;
         display: none;
         justify-content: center;
         align-items: center;

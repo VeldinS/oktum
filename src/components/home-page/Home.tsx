@@ -24,6 +24,7 @@ import image14 from '../../images/bosnian-flag.webp'
 import image15 from '../../images/english-flag.webp'
 import image16 from '../../images/about-page-section3.webp'
 import image17 from '../../images/agrar-page-part3.webp'
+import image18 from '../../images/home-page-mobile-background.webp'
 import Footer from "../UI Elements/Footer";
 import FooterMobile from "../UI Elements/FooterMobile";
 import toast, {Toaster} from "react-hot-toast";
@@ -106,6 +107,22 @@ const Home = () => {
                 setBgImage(image1);
             } else {
                 setBgImage(image10);
+            }
+        };
+        changeBackground();
+        mediaQuery.addListener(changeBackground);
+        return () => {
+            mediaQuery.removeListener(changeBackground);
+        };
+    }, []);
+
+    const [bgImageMobile, setBgImageMobile] = useState(image3);
+    useEffect(() => {
+        const changeBackground = () => {
+            if (mediaQuery.matches) {
+                setBgImageMobile(image3);
+            } else {
+                setBgImageMobile(image18);
             }
         };
         changeBackground();
@@ -204,12 +221,12 @@ const Home = () => {
                     </div>
                 </div>
 
-                <div className={"home-page-heading-div word-waves"}>
+                <div className={"home-page-heading-div"}>
                     <h1 className={"home-page-heading"} >OKTUM</h1>
                 </div>
             </div>
 
-            <div className={"about-part"} style={{backgroundImage: `linear-gradient(to right, rgba(0,0,0,0.3), rgba(0,0,0,0.5) 30%, rgba(0,0,0,0.7) 60%, rgba(0,0,0,0.9)), url(${image3})`,backgroundAttachment: "fixed", backgroundSize: "cover", height: "max-content", backgroundPosition: "center bottom" }}>
+            <div className={"about-part"} style={{backgroundImage: `linear-gradient(to right, rgba(0,0,0,0.3), rgba(0,0,0,0.5) 30%, rgba(0,0,0,0.7) 60%, rgba(0,0,0,0.9)), url(${bgImageMobile})`,backgroundAttachment: "fixed", backgroundSize: "cover", height: "max-content", backgroundPosition: "center bottom" }}>
                 <div className="home-page-about-container d-flex flex-column">
                     <div className={"home-page-about-row"}>
                         <div className={"home-page-about-image-container"}>

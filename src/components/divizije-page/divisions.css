@@ -96,22 +96,22 @@
 
 .divisions-page-header{
     animation-name: enter-from-top;
-    animation-duration: 1s;
+    animation-duration: 2s;
 }
 
 .divisions1-card-agrar{
     animation-name: enter-from-left;
-    animation-duration: 1s;
+    animation-duration: 2s;
 }
 
 .divisions1-card-finance{
     animation-name: enter-from-bottom;
-    animation-duration: 1s;
+    animation-duration: 2s;
 }
 
 .divisions1-card-logistics{
     animation-name: enter-from-right;
-    animation-duration: 1s;
+    animation-duration: 2s;
 }
 
 .divisions-card-image {

@@ -28,6 +28,7 @@ import image15 from "../../images/english-flag.webp";
 import AboutCardMobile from "../cards/about-page/AboutCardMobile";
 import image17 from "../../images/home-page-logistics2.webp";
 import image16 from "../../images/oktum-background.webp";
+import image18 from "../../images/home-page-mobile-background.webp";
 
 const About = () => {
 
@@ -50,6 +51,22 @@ const About = () => {
         });
     }, []);
 
+    const [bgImageMobile, setBgImageMobile] = useState(image1);
+    const mediaQuery = window.matchMedia('(min-width: 500px)');
+    useEffect(() => {
+        const changeBackground = () => {
+            if (mediaQuery.matches) {
+                setBgImageMobile(image1);
+            } else {
+                setBgImageMobile(image18);
+            }
+        };
+        changeBackground();
+        mediaQuery.addListener(changeBackground);
+        return () => {
+            mediaQuery.removeListener(changeBackground);
+        };
+    }, []);
 
     const location = useLocation();
 
@@ -100,7 +117,7 @@ const About = () => {
 
     return (
         <div>
-            <div className={"about-page-main"} style={{backgroundImage:  `linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,.45)), url(${image1})`, backgroundAttachment:"fixed", backgroundSize: "cover", height: "max-content", backgroundPosition: "center center"}}>
+            <div className={"about-page-main"} style={{backgroundImage:  `linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,.45)), url(${bgImageMobile})`, backgroundSize: "cover", height: "max-content", backgroundPosition: "center center"}}>
                 <div className={"about-page-first"}>
                     <div className={"home-page-header"}>
                         <div className={"header-row"}>

@@ -172,8 +172,8 @@ const Contact = () => {
                                 <br/>
                                 <p onClick={() => navigate('/Divisions')} className={"navbar-text1"}>{texts[language].divisionsButton}</p>
                                 <br/>
-                                <div style={{display:"flex", flexDirection:"row", alignItems:"center"}}>
-                                    <p style={{paddingRight: "5px"}} onClick={toggleLanguageMobileAbout}>{texts[language].button}</p>
+                                <div style={{display:"flex", flexDirection:"row", alignItems:"center", marginBottom:"10px"}}>
+                                    <p style={{paddingRight: "5px", margin:"auto"}} onClick={toggleLanguageMobileAbout}>{texts[language].button}</p>
                                     <img className={"language-image"} src={getFlagImageUrl(language)} alt={language + ' flag'}/>
                                 </div>
                                 <img onClick={hideAboutOverlay} className={"close-button"} src={image7} alt={"/"}/>
