@@ -95,6 +95,10 @@
         transform: rotateY(180deg);
     }
 
+    .card-div1.flip1 .content-div1 {
+        transform: rotateY(0deg);
+    }
+
     .back-div1 {
         display: flex;
         flex-direction: column;

@@ -19,14 +19,14 @@ function AboutCardMobile(props: CardProps) {
 
 
     return (
-        <div className={`card-div1 card-div2 division-card-mobile ${isFlipped ? 'flip' : ''}`} onClick={handleClick}>
+        <div className={`card-div1 card-div2 division-card-mobile ${isFlipped ? 'flip' : 'flip1'}`}>
             <div className="content-div1">
-                <div className="front-div1 front-div2 card-front">
+                <div className="front-div1 front-div2 card-front" onClick={handleClick}>
                     <img className="cardImgDivisionsMobile" src={props.imageSrc} alt={props.title} />
                     <h3 className="cardTitleDivisionsMobile">{props.title}</h3>
                     <p className="read-more">{props.readMore}</p>
                 </div>
-                <div className='back-div1 back-div2 card-back'>
+                <div className='back-div1 back-div2 card-back' onClick={handleClick}>
                     <img className="cardImgDivisionsMobile" src={props.imageSrc} alt={props.title} />
                     <p style={{padding: "10px"}} className="description-div1 division-card-mobile-p">{props.text}</p>
                 </div>
