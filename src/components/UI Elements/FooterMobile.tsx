@@ -6,6 +6,7 @@ import image2 from "../../images/logo.webp";
 import {scrollToTop} from "../../functions/helpers";
 import {useNavigate} from "react-router-dom";
 
+
 interface footerFields{
     field1: string,
     field2: string,
@@ -30,6 +31,7 @@ const FooterMobile = (props: footerFields) => {
             <footer className={"home-page-footer-mobile"}>
                 <div className={"footer-row"}>
                     <div className={"column1"}>
+
                         <img id={"navbar-image"} src={image2} className={"logo-image-footer navbar-logo"} alt="Logo" onClick={scrollToTop}/>
                         <p className={"footer-text"} onClick={() => navigate(props.navigate1)}>{props.field1}</p>
                         <p className={"footer-text"} onClick={() => navigate(props.navigate2)}>{props.field2}</p>

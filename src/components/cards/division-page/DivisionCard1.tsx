@@ -12,7 +12,7 @@ interface CardProps{
 function DivisionCard1(props: CardProps) {
     return (
         <div className={"cardDivisions1"}>
-            <img className={"cardImgDivisions1"} src={props.imageSrc} loading={"lazy"} alt={props.title}/>
+            <img className={"cardImgDivisions1"} src={props.imageSrc} alt={props.title}/>
             <p className={"cardTextDivisions1"}>{props.text}</p>
             <h2 className={"cardTitleDivisions1"}>{props.title}</h2>
         </div>

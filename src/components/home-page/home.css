@@ -570,6 +570,21 @@ button:hover .button-text {
 
 /*********FOOTER*********/
 
+.footer-media{
+    opacity: 0.5;
+    margin: 0 10px;
+}
+
+.overlay-media{
+    opacity: 0.6;
+    margin: 0 20px;
+}
+
+.footer-media-mobile{
+    width: 30px;
+    height: 30px;
+}
+
 .home-page-footer-mobile{
     display: none;
 }

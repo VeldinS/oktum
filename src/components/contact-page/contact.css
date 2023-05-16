@@ -22,6 +22,19 @@
     padding-top: 5px;
 }
 
+.contact-info-mail p{
+    margin: 0 10px 10px;
+}
+
+.contact-info-media{
+    margin: 0 20px;
+}
+
+.contact-mail1{
+    display: flex;
+    flex-direction: row;
+}
+
 .contact-page-formRow{
     padding-top: 6rem;
     width: 100%;
@@ -232,6 +245,12 @@
 
     .contact-page-main{
         height: 180vh;
+    }
+
+    .contact-mail1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .contact-page-formRow{

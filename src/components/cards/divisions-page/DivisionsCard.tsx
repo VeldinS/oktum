@@ -16,7 +16,7 @@ function DivisionsCard(props: CardProps) {
 
     return (
         <div onClick={() => navigate(props.navigate)} className="divisions1-card">
-            <img className={"divisions-card-image"} src={props.imageSrc} loading={"lazy"} alt={props.span}/>
+            <img className={"divisions-card-image"} src={props.imageSrc} alt={props.span}/>
             <span>{props.span}</span>
             <div className="hover-text">{props.text}</div>
         </div>

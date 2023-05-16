@@ -24,6 +24,8 @@ import {
 import image14 from "../../images/bosnian-flag.webp";
 import image15 from "../../images/english-flag.webp";
 import DivisionsCard from "../cards/divisions-page/DivisionsCard";
+import image19 from "../../images/facebook.png";
+import image20 from "../../images/instagram2.png";
 
 const Divisions = () => {
 
@@ -68,7 +70,7 @@ const Divisions = () => {
                         <nav className="navbar" >
                             <div id={"navbar-items"} className="navbar-items">
                                 <div className="navbar-item navbar-item-image">
-                                    <img id={"navbar-image"} src={image2} className={"logo-image navbar-logo"} alt="Logo" onClick={() => navigate('/')} />
+                                    <img loading={"lazy"} id={"navbar-image"} src={image2} className={"logo-image navbar-logo"} alt="Logo" onClick={() => navigate('/')} />
                                 </div>
                                 <div className="navbar-item navbar-item1">
                                     <p onClick={() => navigate('/')} className={"navbar-text1"}>{texts[language].homeButton}</p>
@@ -93,7 +95,7 @@ const Divisions = () => {
                                     <div className="dropdown-content">
                                         <a onClick={toggleLanguage} style={{display:"flex", flexDirection:"row", alignItems:"center"}}>
                                             <p style={{paddingRight: "5px", marginBottom: "0"}}>{texts[language].button}</p>
-                                            <img className={"language-image"} src={getFlagImageUrl(language)} alt={language + ' flag'}/>
+                                            <img loading={"lazy"} className={"language-image"} src={getFlagImageUrl(language)} alt={language + ' flag'}/>
                                         </a>
                                     </div>
                                 </div>
@@ -118,9 +120,15 @@ const Divisions = () => {
                             <br/>
                             <div style={{display:"flex", flexDirection:"row", alignItems:"center", marginBottom:"10px"}}>
                                 <p style={{paddingRight: "5px", margin:"auto"}} onClick={toggleLanguageMobileAbout}>{texts[language].button}</p>
-                                <img className={"language-image"} src={getFlagImageUrl(language)} alt={language + ' flag'}/>
+                                <img loading={"lazy"} className={"language-image"} src={getFlagImageUrl(language)} alt={language + ' flag'}/>
                             </div>
-                            <img onClick={hideAboutOverlay} className={"close-button"} src={image6} alt={"/"}/>
+                            <img loading={"lazy"} onClick={hideAboutOverlay} className={"close-button"} src={image6} alt={"/"}/>
+                            <div style={{display:"flex", flexDirection:"column", alignItems:"center", marginTop:"100px"}}>
+                                <div style={{display:"flex", flexDirection:"row"}}>
+                                    <a href={"https://www.facebook.com/people/OKTUM-finance-more/100092493469581/"}><img style={{width:"40px", height:"40px"}} loading={"lazy"} src={image19} className={"contact-image overlay-media"} alt={""}/></a>
+                                    <a href={"https://www.instagram.com/invites/contact/?i=ak4rgdbtvl0e&utm_content=r7xo6xc"}><img style={{width:"40px", height:"40px"}} loading={"lazy"} src={image20} className={"contact-image overlay-media"} alt={""}/></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

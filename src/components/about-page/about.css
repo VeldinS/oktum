@@ -292,6 +292,8 @@
     height: 300px;
     border-radius: 20px;
     filter: brightness(60%);
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+
 }
 
 .about-section1-text{
@@ -334,6 +336,7 @@
     border-radius: 20px;
     filter: brightness(60%);
     margin-left: 3rem;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
 }
 
 @media (max-width: 850px) {
